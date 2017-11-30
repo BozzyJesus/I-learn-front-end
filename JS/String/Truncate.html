@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Truncate </title>
+    </head>
+    <body>
+        <script>            
+          function truncate(str, maxlength) {
+             str.length > maxlength ? alert(str.slice(0,20) + " ..."): alert(str);         
+          }
+          //не писать лишний код             
+            truncate("Вот, что мне хотелось бы сказать на эту тему:", 20);
+            truncate("Всем привет!", 20);
+        </script>
+    </body>
+</html>
+

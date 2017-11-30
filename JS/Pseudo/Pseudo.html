@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UNdefined</title>
+    </head>
+    <body>
+       <!--
+       Проверка на аргумент-undefined
+Как в функции отличить отсутствующий аргумент от undefined?
+
+function f(x) {
+  // ..ваш код..
+  // выведите 1, если первый аргумент есть, и 0 - если нет
+}
+
+f(undefined); // 1
+f(); // 0
+       -->
+        <script>
+         function f(x) {
+        alert( arguments.length ? 1 : 0 );
+}
+
+f(undefined);
+f();
+        </script>
+    </body>
+</html>

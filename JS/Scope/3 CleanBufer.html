@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CleanBUfer</title>
+    </head>
+    <!--        
+Добавьте буферу из решения задачи Функция - строковый буфер метод buffer.clear(), который будет очищать текущее содержимое буфера:
+
+function makeBuffer() {
+  ...ваш код...
+}
+
+var buffer = makeBuffer();
+
+buffer("Тест");
+buffer(" тебя не съест ");
+alert( buffer() ); // Тест тебя не съест
+
+buffer.clear();
+
+alert( buffer() ); // ""
+    -->
+    <body>    
+        <script>
+         function makeBuffer() { 
+         var mesang = "";
+            function buffer (word){
+                 if (arguments.length == 0 ){
+                     return mesang;
+                 }
+             mesang += word;
+             }  
+             buffer.clear = function(){
+               return mesang = "";  
+             }
+             return buffer;
+         };
+var buffer = makeBuffer();
+
+buffer("Тест");
+buffer(" тебя не съест ");
+alert( buffer() ); // Тест тебя не съест
+
+buffer.clear();
+
+alert( buffer() ); // ""       
+        </script>    
+    </body>
+</html>

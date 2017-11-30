@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bufer</title>
+    </head>
+    <!--        
+Создание объекта: var buffer = makeBuffer();.
+Вызов makeBuffer должен возвращать такую функцию buffer, которая при вызове buffer(value) добавляет значение в некоторое внутреннее хранилище, а при вызове без аргументов buffer() – возвращает его.
+Вот пример работы:
+function makeBuffer() { /* ваш код */ }
+var buffer = makeBuffer();
+// добавить значения к буферу
+buffer('Замыкания');
+buffer(' Использовать');
+buffer(' Нужно!');
+// получить текущее значение
+alert( buffer() ); // Замыкания Использовать Нужно!
+Буфер должен преобразовывать все данные к строковому типу:
+var buffer = makeBuffer();
+buffer(0);
+buffer(1);
+buffer(0);
+alert( buffer() ); // '010'
+Решение не должно использовать глобальные переменные.
+    -->
+    <body>    
+        <script>
+         function makeBuffer() { 
+         var mesang = "";
+          return  function (word){
+                 if (arguments.length == 0 ){
+                     return mesang;
+                 }
+             mesang += word;
+             } ;        
+         };
+var buffer = makeBuffer();
+// добавить значения к буферу
+buffer('Замыкания');
+buffer(' Использовать');
+buffer(' Нужно!');
+// получить текущее значение
+alert( buffer() ); // Замыкания Использовать Нужно!          
+var buffer1= makeBuffer();
+buffer1(0);
+buffer1(1);
+buffer1(0);
+alert( buffer1() ); // '010'            
+        </script>    
+    </body>
+</html>

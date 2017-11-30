@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sum</title>
+    </head>
+    <!--        
+Сумма через замыкание
+важность: 4
+Напишите функцию sum, которая работает так: sum(a)(b) = a+b.
+Да, именно так, через двойные скобки (это не опечатка). Например:
+    -->
+    <body>    
+        <script>
+          function sum(a){
+              return function(b){
+                var result =  a+b;
+                alert (result);  
+              }           
+          }      
+            
+sum(1)(2);
+sum(5)(-1);   
+        </script>    
+    </body>
+</html>
