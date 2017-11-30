@@ -1,0 +1,1 @@
+alert("fuck the world");

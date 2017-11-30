@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <title>Fibonachi</title>
+    </head>
+    <body>
+        <script>
+         function fib(n) {
+    var a = 1 ;
+    var b = 0 ;
+    var x; 
+    for (i=0; i < n ; i++) {
+        x = a+b;
+        a = b;
+        b = x;
+    }
+        return b;      
+}
+
+alert( fib(77) ); //5527939700884757  
+                  //5527939700884755
+            
+
+        </script>
+    </body>
+</html>    

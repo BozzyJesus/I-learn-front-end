@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Оформление параграфов */
+
+
+body{
+     background: #333333 url(images/18.jpg) repeat-x top left ;
+}
+#page{
+   width: 960px;
+    margin: 0 auto;
+ }
+
+.strong-red{
+    margin-top: 300px;
+    font-weight: bolder;
+    color:#348ef7;
+    font-family: 'Merriweather', sans-serif;
+    text-align: justify;
+    text-decoration: none;
+    text-indent: 30px;
+    font-variant: small-caps;
+   }
+.light-blue{
+    font-weight: bold;
+    color: blue;
+}
+
+
+#styles li {
+    color: #fff;
+    font-family:'Merriweather', sans-serif;
+    list-style-type:circle; 
+    list-style-position: inside;
+    padding: 5px;
+    border: 1px solid #fff;
+    
+   }
+
+#styles li:hover {
+    background: #000;
+} 
+#navigation{
+    height: 65px;
+    
+}
+#navigation ul li{
+    float: left;
+    position: relative;
+}
+#navigation ul li a {
+    color: #fff;
+    padding: 0 10px;
+    font-family:"Merriweather", sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    height: 65px;
+}
+#navigation ul li a:hover {
+    background: rgba(216, 29, 29, 0.64);
+    text-decoration: underline;
+}
+#navigation .dropdown{
+    position: absolute;
+    top: 100%;  
+    width: 150px;
+    background: #575757;
+    display: none;
+    z-index: 10;
+    
+}
+#navigation li:hover .dropdown{
+    display: block;
+}
+#navigation .dropdown li {
+    width: 100%;
+    line-height: 45px;
+    
+}
+#navigation .dropdown li a{
+    line-height: 45px;
+    height: 45px;
+}
+#header {
+  height: 204px;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 0px ;   
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    top: 90px;
+}
+#content::before, #content::after {
+  content: "";
+  display: table;
+}
+#content::after {
+  clear: both;
+}
+#content {
+  zoom: 1;
+}
+#content{
+    padding-top: 20px;
+}
+#article{
+  width: 740px;
+    padding-right: 20px;
+    float: left;
+    
+}
+#article p{
+    background: yellow;
+}
+#article > p {
+    background: black;
+}
+#article .combinator + p {
+    background: blue;
+}
+     
+
+
+#sidebar{
+    width: 200px;
+    float:left;
+}
+#article p {
+    color: #fff;
+    font-family: "Merriweather";
+}
+#sidebar ul li{
+    font-family:"Merriweather"; 
+    color:#fff;
+   
+}
+
+#Mozart_1 {
+    height: 236px;
+    width: 96px;
+    
+    
+}
+
+#fixed {
+    width: 100%;
+    height: 100%;
+    background: rgba(204, 187, 187, 0.51);
+    position: fixed;
+    top: 0;
+    right:0;
+    
+}
+
+.modal-body {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+}
+
+.pseudo-class {
+    color: red;
+}
+
+.pseudo-class:hover {
+    color: green;
+}
+.pseudo-class:visited {
+    color: blue:
+}
+.pseudo-class:focus{
+    color:yellow;
+}
+#article p:first-child{
+    color:black;
+    
+}
+#article p:last-child{
+    color: yellow;
+}
+.pseudo-element::before,
+.pseudo-element::after {
+    content: "hr";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.pseudo-element::first-letter{
+    color:#fff;
+    font-size: 72px;
+    display:block;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 5px; 
+    
+}
+.first-line::first-line{
+    font-size: 24px;
+    color: #fff;
+}
+::selection{
+    background: #fff;
+    color: yellow;
+}
+
+
+a[target="_blank"] {
+    color: yellow;
+}
+a[title~="внешняя"]{
+    color:red;
+}
+a[class|="social"]{
+    color:green;
+    }
+a[title^="social"]{
+    color:darkorange;
+    }
+a[title$="icon"]{
+    color:aqua;
+    }
+a[title*="co"]{
+    color: darkcyan;
+}
+input[type="text"] {
+    border: 1px solid darkcyan;
+}
+input[type="button"]{
+    border: 1px solid darkcyan;
+    color: aliceblue;
+    background:darkcyan;  
+}
+
+.icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(Images/sprite.png);
+}
+.icon.icon-car {
+    background-position: 0 0;
+}
+.icon.icon-car:hover{
+    background-position: 0 -40px;
+}
+.icon.icon-check {
+    background-position: -40px 0;
+}
+.icon.icon-check:hover {
+    background-position: -40px -40px;
+}
+.icon.icon-cart {
+    background-position: -80px -0px;
+}
+.icon.icon-cart:hover {
+    background-position: -80px -40px;
+}
+.icon.icon-comments {
+    background-position: -120px 0;
+}
+.icon.icon-comments:hover {
+    background-position: -120px -40px;
+}
+@media print{
+    body{
+        background: #fff;
+    
+    }
+    #navigation.
+    .search,
+    #sidebar {
+        display: none;
+        
+    }
+    #article {
+        width: 100%;
+        float: none;
+    }
+}

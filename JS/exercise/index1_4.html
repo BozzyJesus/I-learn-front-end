@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta carset="utf-8">
+        <title>Page fo js</title>        
+    </head>
+    <body> 
+    <p >Input number from 1 to 99 </p>
+      
+       <input id="number" type="text">
+       <button type="button" onclick="myFunction()">Check</button>              
+       <p id="result"></p>
+       
+        <script>
+            function myFunction() {
+                var number, result;
+                
+                number = document.getElementById('number').value;
+                
+                if (isNaN(number) || number <1 || number > 99) {
+                    result= 'INcorrect number' ;
+                } else {
+                    result= 'Correct number' ;
+                }
+                
+                document.getElementById('result').innerHTML= result;
+            }
+        </script>
+    </body>
+</html>

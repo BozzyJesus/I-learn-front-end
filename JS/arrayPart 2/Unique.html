@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UNique</title>
+    </head>
+    <!-- 
+Напишите функцию unique(arr), которая возвращает массив, содержащий только уникальные элементы arr.
+    -->
+    <body>
+        <script>
+   var strings = ["кришна", "кришна", "харе", "харе",
+  "харе", "харе", "кришна", "кришна", "8-()"
+];
+  function unique(strings) {
+    var obj = {};  
+ var arr = strings;
+  for (var i = 0; i < arr.length; i++) {
+       var sorted = arr[i].toLowerCase().split('').sort().join(''); 
+
+    obj[sorted] = arr[i]; 
+  }
+
+  var result = [];
+  for (var key in obj) result.push(obj[key]);
+
+  return result;
+}
+alert( unique(strings) ); // кришна, харе, 8-()
+        </script>
+    </body>
+</html>

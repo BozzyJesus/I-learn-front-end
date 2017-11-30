@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8">
+        <title>Get seconds Today</title>
+    </head>
+    <body>
+       <!--
+      Напишите функцию getSecondsToday() которая возвращает, сколько секунд прошло с начала сегодняшнего дня.
+
+Например, если сейчас 10:00 и не было перехода на зимнее/летнее время, то:
+
+getSecondsToday() == 36000 // (3600 * 10)
+Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+       -->
+        <script>
+        function getSecondsToday(){
+            var date = new Date();
+            //начало дня 
+            date.setHours(0,0,0,0);
+            //время сейчас
+            var Nowdate= new Date();
+            //решение + вывод 
+            var seconds = (Nowdate - date)*0.001;//домнажаем приводим к секундам 
+            alert(Math.round(seconds));
+        }  
+            getSecondsToday();
+            //решение из решебника 
+                /**
+    function getSecondsToday() {
+  var now = new Date();
+
+  // создать объект из текущей даты, без часов-минут-секунд
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  var diff = now - today; // разница в миллисекундах
+  return Math.floor(diff / 1000); // перевести в секунды
+}
+
+alert( getSecondsToday() );
+        **/
+        </script>
+    </body>
+</html>

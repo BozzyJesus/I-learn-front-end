@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Decimal</title>
+    </head>
+    <body>
+        <script>
+            /**
+        function getDecimal(num){
+            var n = Math.abs(num);
+            if (n!=0) {
+                n =n - Math.floor(n);
+                alert(Math.floor(n))    ;
+            }
+            return n.toPrecision(3) ;
+        }
+            **/
+            //почти правильно ты старался )
+        function getDecimal(num) {
+            var str = "" + num;// преобразование в строку
+            var zeroPos = str.indexOf(".");// поиск по индексу (.)
+            if (zeroPos == -1) return 0;// начало цикла str.indexOf(возвращает значение (-1)) если точки нет вернет 0 
+                str = str.slice(zeroPos);// отсекает  от строки все до указаного индекса в нащем случае (.) и выводит новую строку 
+            return +str;//вернет строку с типом данных Number 
+        }
+            alert( getDecimal(12.345) ); // 0.345
+            alert( getDecimal(1.2) ); // 0.2
+            alert( getDecimal(-1.2) ); // 0.2
+            alert( getDecimal(1.9) ); // 0.9   
+        </script>
+    </body>
+</html>
