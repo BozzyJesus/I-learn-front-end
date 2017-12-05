@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Counter Object</title>
+</head>
+
+<body>
+    <!--
+      Добавить в конструктор Article:
+    Подсчёт общего количества созданных объектов.
+    Запоминание даты последнего созданного объекта.
+Используйте для этого статические свойства.
+Пусть вызов Article.showStats() выводит то и другое.
+Использование:
+function Article() {
+  this.created = new Date();
+  // ... ваш код ...
+}
+new Article();
+new Article();
+Article.showStats(); // Всего: 2, Последняя: (дата)
+new Article();
+Article.showStats(); // Всего: 3, Последняя: (дата)
+       -->
+    <script>
+          function Article() {
+            this.created = new Date();
+            Article.count++ ;
+            Article.last = this.created;
+                 }
+          Article.count = 0;
+          Article.showStats = function (){
+               alert(this.count + " Последняя: " + this.last); // без разницы Article или this значения те же Счетки но для дальнейшкго использования лучше this.
+           };
+        new Article();
+        new Article();  
+        Article.showStats(); // Всего: 2, Последняя: (дата)
+        new Article();
+        Article.showStats(); // Всего: 3, Последняя: (дата)
+
+    </script>
+</body>
+
+</html>
